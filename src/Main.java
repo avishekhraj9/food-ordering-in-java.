@@ -23,6 +23,8 @@ public class Main {
 
     public static void order(){
         int samosa_stock =100;
+        int paties_stock = 100;
+        int kachori_stock =100;
         System.out.println("Press 1 to SAMOSA , Press 2 to PATIES , Press 3 to KACHORI and Press 4 to Cancel");
         System.out.print("Press you want to buy? :");
         choose = input.nextInt();
@@ -60,6 +62,7 @@ public class Main {
             System.out.print("How many PATIES you want to Buy? :");
             quantity =input.nextInt();
             total = total +(quantity*40);
+            paties_stock= paties_stock-quantity;
 
             System.out.println("You want to buy again? ");
             System.out.println("Press Y for Yes and N for N : ");
@@ -67,6 +70,7 @@ public class Main {
             if(again.equalsIgnoreCase("Y")){
                 order();
             }else{
+                System.out.println("Total price is " + total);
                 System.out.println("Enter a payment ");
                 pay = input.nextDouble();
                 if(pay <=total){
@@ -76,6 +80,7 @@ public class Main {
                     total = pay-total;
                     System.out.println("The change is " + total);
                     System.out.println("Thank for ORDERING, ORDER WILL BE SERVRED SORTLY.");
+                    System.out.println("PATIES STOCK LEFT"+paties_stock);
                 }
             }
         }else if(choose==3){
@@ -83,6 +88,7 @@ public class Main {
             System.out.print("How many KACHORI you want to Buy? :");
             quantity =input.nextInt();
             total = total +(quantity*30);
+            kachori_stock=kachori_stock-quantity;
 
             System.out.println("You want to buy again? ");
             System.out.println("Press Y for Yes and N for N : ");
@@ -90,6 +96,7 @@ public class Main {
             if(again.equalsIgnoreCase("Y")){
                 order();
             }else{
+                System.out.println("Total price is " + total);
                 System.out.println("Enter a payment ");
                 pay = input.nextDouble();
                 if(pay <=total){
@@ -99,6 +106,7 @@ public class Main {
                     total = pay-total;
                     System.out.println("The change is " + total);
                     System.out.println("Thank for ORDERING, ORDER WILL BE SERVRED SORTLY.");
+                    System.out.println("KACHORI STOCK LEFT"+kachori_stock);
                 }
             }
         }else if(choose==4){
