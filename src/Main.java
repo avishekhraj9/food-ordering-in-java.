@@ -8,9 +8,13 @@ public class Main {
     public static int quantity=1;
     public static double total=0,pay;
 
+    public static int samosa_stock =100;
+    public static int paties_stock = 100;
+    public static int kachori_stock =100;
 
 
-    public static void menu(){
+
+    public static void menu_card(){
         System.out.println("\t\t\t\t+===================================+");
         System.out.println("\t\t\t\t------------LPU KA DHABA-------------");
         System.out.println("\t\t\t\t----------------MENU-----------------");
@@ -21,10 +25,9 @@ public class Main {
         System.out.println("\t\t\t\t+====================================+");
     }
 
-    public static void order(){
-        int samosa_stock =100;
-        int paties_stock = 100;
-        int kachori_stock =100;
+    public static void place_order(){
+
+
         System.out.println("Press 1 to SAMOSA , Press 2 to PATIES , Press 3 to KACHORI and Press 4 to Cancel");
         System.out.print("Press you want to buy? :");
         choose = input.nextInt();
@@ -42,7 +45,7 @@ public class Main {
             again = input.next();
             // samosa_stock=samosa_stock-again;
             if(again.equalsIgnoreCase("Y")){
-                order();
+                place_order();
             }else{
                 System.out.println("Total price is " + total);
                 System.out.println("Enter a payment ");
@@ -53,8 +56,8 @@ public class Main {
                     System.out.println("Total price is " + total);
                     total = pay-total;
                     System.out.println("The change is " + total);
-                    System.out.println("Thank for ORDERING, ORDER WILL BE SERVRED SORTLY.");
-                    System.out.println("SAMOSA STOCK LEFT"+samosa_stock);
+                    System.out.println("Thank for orderING, order WILL BE SERVRED SORTLY.");
+                    System.out.println("SAMOSA STOCK LEFT "+samosa_stock);
                 }
             }
         }else if(choose==2){
@@ -68,7 +71,7 @@ public class Main {
             System.out.println("Press Y for Yes and N for N : ");
             again = input.next();
             if(again.equalsIgnoreCase("Y")){
-                order();
+                place_order();
             }else{
                 System.out.println("Total price is " + total);
                 System.out.println("Enter a payment ");
@@ -79,8 +82,8 @@ public class Main {
                     System.out.println("Total price is " + total);
                     total = pay-total;
                     System.out.println("The change is " + total);
-                    System.out.println("Thank for ORDERING, ORDER WILL BE SERVRED SORTLY.");
-                    System.out.println("PATIES STOCK LEFT"+paties_stock);
+                    System.out.println("Thank for orderING, order WILL BE SERVRED SORTLY.");
+                    System.out.println("PATIES STOCK LEFT "+paties_stock);
                 }
             }
         }else if(choose==3){
@@ -94,7 +97,7 @@ public class Main {
             System.out.println("Press Y for Yes and N for N : ");
             again = input.next();
             if(again.equalsIgnoreCase("Y")){
-                order();
+                place_order();
             }else{
                 System.out.println("Total price is " + total);
                 System.out.println("Enter a payment ");
@@ -105,8 +108,8 @@ public class Main {
                     System.out.println("Total price is " + total);
                     total = pay-total;
                     System.out.println("The change is " + total);
-                    System.out.println("Thank for ORDERING, ORDER WILL BE SERVRED SORTLY.");
-                    System.out.println("KACHORI STOCK LEFT"+kachori_stock);
+                    System.out.println("Thank for orderING, order WILL BE SERVRED SORTLY.");
+                    System.out.println("KACHORI STOCK LEFT "+kachori_stock);
                 }
             }
         }else if(choose==4){
@@ -114,11 +117,11 @@ public class Main {
 
         }else{
             System.out.println("Choose 1 to 4 only!");
-            order();
+            place_order();
         }
     }
     public static void main(String[] args) {
-        menu();
-        order();
+        menu_card();
+        place_order();
     }
 }
