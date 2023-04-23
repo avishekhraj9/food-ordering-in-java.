@@ -11,6 +11,8 @@ public class Main {
     public static int samosa_stock =100;
     public static int paties_stock = 100;
     public static int kachori_stock =100;
+    public static String code ="10OFF";
+    public static String Coupon_code;
 
 
 
@@ -48,6 +50,15 @@ public class Main {
                 place_order();
             }else{
                 System.out.println("Total price is " + total);
+                System.out.println("Enter the Code");
+                Coupon_code=input.next();
+                if (Coupon_code.equalsIgnoreCase(code))
+                {
+                    total =total-(0.1*total);
+                }
+                System.out.println("Amount after the discount "+total);
+
+
                 System.out.println("Enter a payment ");
                 pay = input.nextDouble();
                 if(pay <=total){
@@ -58,6 +69,8 @@ public class Main {
                     System.out.println("The change is " + total);
                     System.out.println("Thank for orderING, order WILL BE SERVRED SORTLY.");
                     System.out.println("SAMOSA STOCK LEFT "+samosa_stock);
+                    System.out.println("PATIES STOCK LEFT "+paties_stock);
+                    System.out.println("KACHORI STOCK LEFT "+kachori_stock);
                 }
             }
         }else if(choose==2){
@@ -74,6 +87,13 @@ public class Main {
                 place_order();
             }else{
                 System.out.println("Total price is " + total);
+                System.out.println("Enter the Code");
+                Coupon_code=input.next();
+                if (Coupon_code.equalsIgnoreCase(code))
+                {
+                    total =total-(0.1*total);
+                }
+                System.out.println("Amount after the discount "+total);
                 System.out.println("Enter a payment ");
                 pay = input.nextDouble();
                 if(pay <=total){
@@ -84,6 +104,9 @@ public class Main {
                     System.out.println("The change is " + total);
                     System.out.println("Thank for orderING, order WILL BE SERVRED SORTLY.");
                     System.out.println("PATIES STOCK LEFT "+paties_stock);
+                    System.out.println("SAMOSA STOCK LEFT "+samosa_stock);
+                    System.out.println("KACHORI STOCK LEFT "+kachori_stock);
+
                 }
             }
         }else if(choose==3){
@@ -100,6 +123,13 @@ public class Main {
                 place_order();
             }else{
                 System.out.println("Total price is " + total);
+                System.out.println("Enter the Code");
+                Coupon_code=input.next();
+                if (Coupon_code.equalsIgnoreCase(code))
+                {
+                    total =total-(0.1*total);
+                }
+                System.out.println("Amount after the discount "+total);
                 System.out.println("Enter a payment ");
                 pay = input.nextDouble();
                 if(pay <=total){
@@ -110,6 +140,8 @@ public class Main {
                     System.out.println("The change is " + total);
                     System.out.println("Thank for orderING, order WILL BE SERVRED SORTLY.");
                     System.out.println("KACHORI STOCK LEFT "+kachori_stock);
+                    System.out.println("SAMOSA STOCK LEFT "+samosa_stock);
+                    System.out.println("PATIES STOCK LEFT "+paties_stock);
                 }
             }
         }else if(choose==4){
